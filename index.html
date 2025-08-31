@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="2; url=https://example.com"> <!-- 2 sec delay -->
+  <title>Redirecting...</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+    .loader {
+      border: 6px solid rgba(255,255,255,0.3);
+      border-top: 6px solid #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .box {
+      background: rgba(0,0,0,0.3);
+      padding: 20px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    h1 {
+      margin: 15px 0;
+      font-size: 24px;
+    }
+    p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    // fallback redirect
+    setTimeout(function(){
+      window.location.replace("https://example.com");
+    },2000);
+  </script>
+</head>
+<body>
+  <div class="box">
+    <div class="loader"></div>
+    <h1>Redirecting...</h1>
+    <p>অপেক্ষা করুন</p>
+  </div>
+</body>
+</html>
